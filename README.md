@@ -1,11 +1,15 @@
 ## Launching the API
 
 The application was written in Python 3.8.9 with the use of Spyder 4.2.5. In order to launch it, first of all you need the 
-'flask' web framework. Open the command prompt and use the package manager [pip](https://pip.pypa.io/en/stable/) to install it.
+"flask" web framework. Open the command prompt and use the package manager [pip](https://pip.pypa.io/en/stable/) to install it.
 ```bash
 pip install flask
 ```
-Then go to the folder where the file energy_plan.py is stored. In case you have only Python 3 installed on your PC type:
+Then go to the folder where you have stored the file requirements.txt and install the packages with:
+```bash
+pip install -r requirements.txt
+```
+Finally, go to the folder where the file energy_plan.py is stored. In case you have only Python 3 installed on your PC type:
 ```bash
 python energy_plan.py
 ```
@@ -31,8 +35,8 @@ provides us with an optimal solution. Sometimes though, one of the 3 gas-fired p
 asked to produce below the minimum power it generates when turned on. In such cases, we change 
 the resource allocation in the model in order to avoid overproduction. The serial activation makes 
 it a rather simple task. For example, in order to increase the power provided by the 2nd big gas-fired 
-plant and make it equal to its pmin, we reduce proportionately the supply of the 1st big gas-fired 
-plant. The same way, if we want to make the power of the small gas-fired plant equal to its pmin 
+plant and make it equal to its Pmin, we reduce proportionately the supply of the 1st big gas-fired 
+plant. The same way, if we want to make the power of the small gas-fired plant equal to its Pmin 
 we reduce proportionately the supply of 2nd big gas-fired plant. In the case of the 1st big gas-fired 
 plant we have two options; either we substitute it with the small gas-fired plant or we reduce 
 proportionately the supply of the big windpark. All these changes take place so as to ensure 
